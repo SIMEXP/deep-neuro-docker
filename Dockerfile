@@ -6,3 +6,5 @@ LABEL maintainer="Loic Tetrel <loic.tetrel.pro@gmail.com>"
 
 RUN ${PIP} install tables \
     nilearn
+    
+RUN mkdir /run/user
