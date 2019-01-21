@@ -50,3 +50,5 @@ singularityware/docker2singularity \
 deep-neuro-docker
 ```
 The singularity image will be in `<save_path>`.
+
+*Docker image should be available on Dockerhub soon*
