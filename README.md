@@ -13,8 +13,8 @@ It is based from the official [tensorflow build](https://github.com/tensorflow/t
 - tensorflow
 - ubuntu:16.04
 
-# Building
-### Docker
+## Building
+#### Docker
 Firt clone the repository:
 ```
 git clone git@github.com:SIMEXP/deeplearning-docker.git
@@ -33,7 +33,7 @@ For example if you want to enable nvidia gpu support:
 docker build--build-arg TAG=-gpu --tag=deep-neuro-docker .
 ```
 All tags are available [here](https://hub.docker.com/r/tensorflow/tensorflow).
-### Singularity
+#### Singularity
 
 First install [Docker2Singularity](https://github.com/singularityware/docker2singularity).
 
@@ -52,7 +52,7 @@ singularityware/docker2singularity \
 ```
 The singularity image will be in `<save_path>`.
 
-# Usage
+## Usage
 
 To run the docker container and test the notebook from tensorflow
 ```
