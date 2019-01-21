@@ -47,7 +47,7 @@ sudo docker run -v /var/run/docker.sock:/var/run/docker.sock \
 -v <save_path>:/output \
 --privileged -t --rm \
 singularityware/docker2singularity \
-deep-neuro-docker
+--name deep-neuro-docker deep-neuro-docker
 ```
 The singularity image will be in `<save_path>`.
 
