@@ -9,4 +9,4 @@ RUN echo 'unset XDG_RUNTIME_DIR' >> /etc/bash.bashrc
 RUN pip3 install tables \
     nilearn
     
-ENTRYPOINT source /etc/bash.bashrc
+ENTRYPOINT ["bash", "-c", "source /etc/bash.bashrc"]
