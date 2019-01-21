@@ -35,11 +35,18 @@ docker build--build-arg TAG=-gpu --tag=deep-neuro-docker .
 ### Singularity
 
 First install [Docker2Singularity](https://github.com/singularityware/docker2singularity).
-Finally, convert the docker image:
+
+Create a directory where you want the `.simg` to be saved:
+```
+mkdir <save_path>
+```
+
+Convert the docker image:
 ```
 sudo docker run -v /var/run/docker.sock:/var/run/docker.sock \
--v /Where/to/save/simg:/output \
+-v <save_path>:/output \
 --privileged -t --rm \
 singularityware/docker2singularity \
 deep-neuro-docker
 ```
+The singularity image will be in `<save_path>`.
