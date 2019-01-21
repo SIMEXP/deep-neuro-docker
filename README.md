@@ -52,4 +52,17 @@ singularityware/docker2singularity \
 ```
 The singularity image will be in `<save_path>`.
 
+# Usage
+
+To run the docker container and test the notebook from tensorflow
+```
+sudo docker run -p 8888:8888 -it deep-neuro-docker
+```
+You can then open a web browser and see look at the notebooks !
+
+If you want to play with your own notebooks, 
+```
+sudo docker run -p 8888:8888 -v ${PWD}:/notebooks -it deep-neuro-docker
+```
+
 *Docker image should be available on Dockerhub soon*
