@@ -31,7 +31,7 @@ Execute `./BUILD`, this will create a singularity image from the docker file and
 
 #### Manually
 
-##### Docker
+###### Docker
 ```
 sudo docker build --tag=deep-neuro-docker .
 ```
@@ -41,7 +41,7 @@ For example if you want to enable nvidia gpu support:
 docker build--build-arg TAG=-gpu --tag=deep-neuro-docker .
 ```
 All tags are available [here](https://hub.docker.com/r/tensorflow/tensorflow).
-##### Singularity
+###### Singularity
 
 First install [Docker2Singularity](https://github.com/singularityware/docker2singularity).
 
