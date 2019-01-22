@@ -15,7 +15,7 @@ It is based from the official [tensorflow build](https://github.com/tensorflow/t
 
 ## Building
 
-Firt clone the repository:
+Firt clone the repository where you want:
 ```
 git clone git@github.com:SIMEXP/deeplearning-docker.git
 ```
