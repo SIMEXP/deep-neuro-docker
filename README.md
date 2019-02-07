@@ -38,7 +38,7 @@ sudo docker build --tag=deep-neuro-docker .
 If you want to change the tensorflow release, please use `TAG`.
 For example if you want to enable nvidia gpu support:
 ```
-docker build--build-arg TAG=-gpu --tag=deep-neuro-docker-gpu .
+sudo docker build --build-arg TAG=-gpu --tag=deep-neuro-docker-gpu .
 ```
 All tags are available [here](https://hub.docker.com/r/tensorflow/tensorflow).
 ###### Singularity
