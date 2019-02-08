@@ -13,6 +13,13 @@ It is based from the official [tensorflow build](https://github.com/tensorflow/t
 - tensorflow
 - ubuntu:16.04
 
+For GPU :
+* CUDA=10.0
+* CUDNN=7.4.1.5
+
+For use on pin, meleze, please use `gpu-tf1.2.1-cuda8-cudnn5.1/Dockerfile` (with TF=1.2.1, CUDA=8.0 and CUDNN=5.1)
+For use on cedar use 
+
 ## Building
 
 Firt clone the repository where you want:
@@ -74,3 +81,7 @@ sudo docker run -p 8888:8888 -v ${PWD}:/notebooks -it deep-neuro-docker
 ```
 
 *Docker image should be available on Dockerhub soon*
+
+## cuda8 and cudnn5.1
+
+For the servers on simexp, the previous setup will n
