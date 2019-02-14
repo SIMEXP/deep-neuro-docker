@@ -18,7 +18,7 @@ For GPU :
 * CUDNN=7.4.1.5
 
 For use on pin, meleze, please use `gpu-tf1.2.1-cuda8-cudnn5.1/Dockerfile` (with TF=1.2.1, CUDA=8.0 and CUDNN=5.1)
-For use on cedar use 
+For use on cedar use `gpu-tf1.7.0-cuda9-cudnn7/Dockerfile`
 
 ## Building
 
