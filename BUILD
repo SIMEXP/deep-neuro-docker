@@ -1,7 +1,15 @@
+#!/bin/bash
+
+echo "Will now build $1"
+
+echo "Updating docker image from remote..."
 git pull
 
-sudo docker build --tag=deep-neuro-docker .
+echo "Building docker image..."
+sudo docker build --tag=$1 .
 
-sudo docker run -v /var/run/docker.sock:/var/run/docker.sock -v $(pwd):/output --privileged -t --rm singularityware/docker2singularity --name deep-neuro-docker deep-neuro-docker
+echo "Converting to singularity..."
+sudo docker run -v /var/run/docker.sock:/var/run/docker.sock -v $(pwd):/output --privileged -t --rm singularityware/docker2singularity --name $1 $1
 
-rsync -rlt --info=progress2 deep-neuro-docker.simg stark:/data/cisl/CONTAINERS
+echo "Transferring image to the server..."
+rsync -rlt --info=progress2 $1.simg stark:/data/cisl/CONTAINERS
