@@ -19,7 +19,7 @@
 # throughout. Please refer to the TensorFlow dockerfiles documentation
 # for more information.
 
-FROM tensorflow/tensorflow:1.2.1-gpu-py3 as base
+FROM tensorflow/tensorflow:1.10.1-gpu-py3 as base
 
 ENV USE_PYTHON_3_NOT_2=1
 ENV _PY_SUFFIX=${USE_PYTHON_3_NOT_2:+3}
@@ -46,6 +46,7 @@ EXPOSE 8888
 RUN ${PYTHON} -m ipykernel.kernelspec
 
 RUN ${PIP} install tables \
+scipy \
 nilearn \
 keras
 
