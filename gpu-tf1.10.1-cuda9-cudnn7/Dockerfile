@@ -47,6 +47,7 @@ RUN ${PYTHON} -m ipykernel.kernelspec
 
 RUN ${PIP} install tables \
 scipy \
+lucid \
 nilearn \
 keras
 
