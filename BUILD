@@ -12,4 +12,4 @@ echo "Converting to singularity..."
 sudo docker run -v /var/run/docker.sock:/var/run/docker.sock -v $(pwd):/output --privileged -t --rm singularityware/docker2singularity --name $1 $1
 
 echo "Transferring image to the server..."
-rsync -rlt --info=progress2 $1.simg stark:/data/cisl/CONTAINERS
+rsync -rlt --info=progress2 $1.simg stark.criugm.qc.ca:/data/cisl/CONTAINERS
